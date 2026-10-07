@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazing Laptop Nagpur</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f4f7fb;
+  color:#10233f;
+}
+
+header{
+  height:70px;
+  padding:0 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#06172f;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 5px 20px #0004;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:900;
+}
+
+.logo span{
+  color:#20c8ff;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+  min-height:700px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,18,39,.90),
+      rgba(4,18,39,.62),
+      rgba(4,18,39,.90)
+    ),
+    url("https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=2000&q=90");
+
+  background-size:cover;
+  background-position:center;
+}
+
+/* extra laptop showroom glow */
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:#16c9ff33;
+  border-radius:50%;
+  filter:blur(100px);
+  left:-150px;
+  top:-150px;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:#4d65ff33;
+  border-radius:50%;
+  filter:blur(100px);
+  right:-150px;
+  bottom:-180px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:5;
+  color:white;
+  max-width:950px;
+  padding:30px;
+  animation:appear 1s ease;
+}
+
+.badge{
+  display:inline-block;
+  padding:10px 20px;
+  border-radius:30px;
+  background:#ffffff18;
+  border:1px solid #ffffff55;
+  backdrop-filter:blur(10px);
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(45px,8vw,82px);
+  line-height:.95;
+  letter-spacing:-3px;
+  text-shadow:0 5px 30px #000;
+}
+
+.trading{
+  margin-top:20px;
+  font-size:clamp(25px,4vw,40px);
+  color:#30d5ff;
+  font-weight:900;
+  letter-spacing:3px;
+  text-shadow:0 3px 20px #000;
+}
+
+.hero p{
+  max-width:650px;
+  margin:25px auto;
+  line-height:1.7;
+  color:#e5f4ff;
+  font-size:17px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.btn{
+  padding:15px 27px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.primary{
+  color:white;
+  background:#079bd8;
+  box-shadow:0 10px 30px #079bd855;
+}
+
+.secondary{
+  color:white;
+  border:2px solid white;
+  background:#ffffff12;
+  backdrop-filter:blur(8px);
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+}
+
+/* PRODUCTS */
+
+section{
+  padding:75px 7%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.title h2{
+  font-size:36px;
+}
+
+.title p{
+  color:#68778c;
+  margin-top:10px;
+}
+
+.products{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:white;
+  padding:30px 20px;
+  text-align:center;
+  border-radius:20px;
+  box-shadow:0 10px 30px #10233f12;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.icon{
+  font-size:50px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#66758a;
+  line-height:1.6;
+}
+
+/* SERVICES */
+
+.services{
+  background:#06172f;
+  color:white;
+}
+
+.services .title h2{
+  color:white;
+}
+
+.services .title p{
+  color:#b8c8db;
+}
+
+.service-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.service{
+  padding:28px;
+  border-radius:18px;
+  background:#102b4e;
+  border:1px solid #285078;
+}
+
+.service p{
+  color:#c1d0e1;
+  line-height:1.6;
+  margin-top:10px;
+}
+
+/* CONTACT */
+
+.contact{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px #10233f12;
+}
+
+.contact-card h3{
+  margin-bottom:18px;
+}
+
+.contact-card p{
+  color:#607087;
+  line-height:1.8;
+}
+
+.phone{
+  display:block;
+  color:#078ac4;
+  text-decoration:none;
+  font-weight:bold;
+  margin:11px 0;
+}
+
+.map{
+  display:inline-block;
+  margin-top:18px;
+  padding:13px 20px;
+  background:#06172f;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+  background:#030c1c;
+  color:#aebdd0;
+  text-align:center;
+  padding:30px;
+}
+
+footer strong{
+  color:white;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25d366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  text-decoration:none;
+  z-index:999;
+  box-shadow:0 8px 25px #0004;
+}
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform:translateY(35px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:700px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    min-height:680px;
+  }
+
+  .hero h1{
+    font-size:46px;
+  }
+
+  .trading{
+    font-size:25px;
+  }
+
+  section{
+    padding:60px 5%;
+  }
+
+  .contact{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    AMAZING <span>LAPTOP</span>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      💻 PREMIUM LAPTOP STORE
+    </div>
+
+    <h1>
+      AMAZING LAPTOP<br>
+      NAGPUR
+    </h1>
+
+    <div class="trading">
+      Amazing Trading
+    </div>
+
+    <p>
+      Laptops, computers and technology solutions
+      for work, study, business and everyday life.
+    </p>
+
+    <div class="buttons">
+      <a href="#products" class="btn primary">
+        Explore Products
+      </a>
+
+      <a href="#contact" class="btn secondary">
+        Contact Us
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="products">
+
+  <div class="title">
+    <h2>Our Products</h2>
+    <p>Choose the right technology for you</p>
+  </div>
+
+  <div class="products">
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Laptops</h3>
+      <p>
+        Laptops for students, professionals,
+        business and everyday use.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🖥️</div>
+      <h3>Desktop Computers</h3>
+      <p>
+        Powerful desktop solutions for
+        home and office.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">⌨️</div>
+      <h3>Accessories</h3>
+      <p>
+        Computer accessories for your
+        complete setup.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔧</div>
+      <h3>Computer Solutions</h3>
+      <p>
+        Professional solutions for your
+        laptop and computer needs.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="services" id="services">
+
+  <div class="title">
+    <h2>Why Choose Us?</h2>
+    <p>Professional technology solutions</p>
+  </div>
+
+  <div class="service-grid">
+
+    <div class="service">
+      <h3>💻 Laptop Solutions</h3>
+      <p>
+        Find a laptop according to your
+        requirements and budget.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>🖥️ Computer Solutions</h3>
+      <p>
+        Solutions for personal, office
+        and business computing.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>⚙️ Accessories</h3>
+      <p>
+        Complete your setup with
+        useful computer accessories.
+      </p>
+    </div>
+
+    <div class="service">
+      <h3>🤝 Professional Service</h3>
+      <p>
+        Customer-focused technology
+        guidance and support.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contact">
+
+  <div class="title">
+    <h2>Contact Amazing Laptop Nagpur</h2>
+    <p>Visit our shop in Nagpur</p>
+  </div>
+
+  <div class="contact">
+
+    <div class="contact-card">
+
+      <h3>📍 Shop Address</h3>
+
+      <p>
+        1st Floor, 614/A,<br>
+        Behind NMC School,<br>
+        Ganeshpeth Colony,<br>
+        Nagpur, Maharashtra – 440032
+      </p>
+
+      <a
+        class="map"
+        target="_blank"
+        href="https://www.google.com/maps/search/?api=1&query=1st+Floor+614%2FA+behind+NMC+School+Ganeshpeth+Colony+Nagpur+Maharashtra+440032">
+        📍 Get Directions
+      </a>
+
+    </div>
+
+    <div class="contact-card">
+
+      <h3>📞 Contact Numbers</h3>
+
+      <a class="phone" href="tel:7588244077">
+        7588244077
+      </a>
+
+      <a class="phone" href="tel:7888099347">
+        7888099347
+      </a>
+
+      <a class="phone" href="tel:77888099349">
+        77888099349
+      </a>
+
+      <a class="phone" href="tel:7888099348">
+        7888099348
+      </a>
+
+      <br>
+
+      <a class="btn primary" href="tel:7588244077">
+        📞 Call Now
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 <strong>AMAZING LAPTOP NAGPUR</strong>
+  </p>
+
+  <p>
+    Amazing Trading • Nagpur, Maharashtra
+  </p>
+
+</footer>
+
+
+<a
+  class="whatsapp"
+  href="https://wa.me/917588244077"
+  target="_blank">
+  💬
+</a>
+
+</body>
+  </html>
